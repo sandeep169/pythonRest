@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        table,th,td{
+	border: 1px solid black;
+	padding: 15px;
+
+}
+<!-- space between cells-->
+
+	table{
+		border-spacing: 10px;
+	}
+
+    </style>
+</head>
+<body style="background-color:rgb(145,145,145)">
+<h>this is default page</h>
+
+<p>Data fetched through APi</p>
+              <a href="userdata">click to check user data</a>
+
+
+<p>to check data type in url : api/user_list OR userlist</p>
+
+<table style="border-collapse: collapse;">
+    <tr>
+        <th>id</th>
+        <th>employee id</th>
+        <th>employee name</th>
+        <th>age</th>
+        <th>ranking</th>
+    </tr>
+    {% for obj in obj %}
+    <tr>
+
+        <td>{{obj.id}} </td>
+        <td>{{obj.employee_id}}</td>
+        <td>{{obj.name}}</td>
+        <td>{{obj.age}}</td>
+        <td>{{obj.ranking}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
